@@ -5,15 +5,15 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""##登録アドレス
-      t.string :encrypted_password, null: false, default: ""##パスワード
-      t.string :encrypted_password_confirmation, null: ""##パスワードの確認
-      t.date :birthday, null: false##誕生日
+      t.string :password, null: false, default: ""##パスワード
+      t.string :password_confirmation, null: false, default: ""##パスワード確認
+      t.date :birth_date, null: false##誕生日
 
 
-      t.string :surname,            null: false, default: ""  ##姓
-      t.string :name,               null: false, default: "" ##名
-      t.string :surname_phonetic,   null: false, default: "" ##姓(カタカナ）
-      t.string :name_phonetic,      null: false, default: "" ##名(カタカナ）
+      t.string :first_name,            null: false, default: ""  ##姓
+      t.string :last_name,               null: false, default: "" ##名
+      t.string :first_name_kana,   null: false, default: "" ##姓(カタカナ）
+      t.string :last_name_kana,      null: false, default: "" ##名(カタカナ）
       t.string :nickname,           null: false, default: "" ##ニックネーム 
 
       

@@ -27,13 +27,13 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | email    | string | null: false |<!-- 登録アドレス -->
-| encrypted_password | string | null: false |<!-- パスワード -->
-| encrypted_password_confirmation | string | '': false |<!-- パスワードの確認 -->
-| birthday | date | null: false |<!-- 誕生日 -->
-| surname  | string | null: false |<!-- 姓 -->
-| name     | string | null: false |<!-- 名 -->
-| surname_phonetic  | string | null: false |<!-- 姓(カタカナ） -->
-| name_phonetic  | string | null: false |<!-- 名(カタカナ） -->
+| password | string | null: false |<!-- パスワード -->
+| password_confirmation | string | null: false |<!-- パスワードの確認 -->
+| birth_date | date | null: false |<!-- 誕生日 -->
+| first_name  | string | null: false |<!-- 姓 -->
+| last_name     | string | null: false |<!-- 名 -->
+| first_name_kana  | string | null: false |<!-- 姓(カタカナ） -->
+| last_name_kana  | string | null: false |<!-- 名(カタカナ） -->
 | nikname  | string | null: false |<!-- ニックネーム -->
 
 
