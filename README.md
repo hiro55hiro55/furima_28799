@@ -34,7 +34,7 @@ Things you may want to cover:
 | email    | string | null: false |
 | password | string | null: false |
 | password_confirmation | string | '': false |
-| date | string | null: false |
+| birthday | date | null: false |
 
 ### Association
 
@@ -47,21 +47,17 @@ Things you may want to cover:
 | image    | references | null: false |   <!-- 画像  -->
 | item_name   | string | null: false |  <!-- 商品名 -->
 | item_explanation | string | null: false |<!-- 商品説明 -->
-| category | string | null: false |<!-- カテゴリー -->
-| item_status | string | null: false |<!-- 商品の状態 -->
-| item_status | string | null: false |<!-- 商品の状態 -->
-| shipping_charges | string | null: false |<!-- 配送料の負担 -->
-| shipping_region | string | null: false |<!-- 配送料の地域 -->
-| days_until_shipping | string | null: false |<!-- 配送料の負担 -->
+| category | integer| null: false |<!-- カテゴリー -->
+| item_status | integer | null: false |<!-- 商品の状態 -->
+| shipping_charges | integer | null: false |<!-- 配送料の負担 -->
+| shipping_region | integer | null: false |<!-- 配送料の地域 -->
+| days_until_shipping | integer | null: false |<!-- 配送料の負担 -->
 | price    | string | null: false |<!-- 価格 -->
-| sales_commission    | string | null: false |<!-- 販売手数料 -->
-| sales_profit    | string | null: false |<!-- 販売利益 -->
 
 
 ### Association
 - belongs_to :user
 - has_one    :shop 
-- has_one: address
 ## shopテーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
@@ -75,8 +71,8 @@ Things you may want to cover:
 ## addressテーブル
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| postal_code    | string | null: false |
-| prefecter      | integer | null: false , foreign_key:true |
+| postal_code    | integer | null: false |
+| prefecter      | integer | null: false|
 | city           | string | null: false |
 | house_number   | string | null: false |
 | building_name  | string | null: false |
