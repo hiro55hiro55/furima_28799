@@ -7,7 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :email,              null: false, default: ""##登録アドレス
       t.string :encrypted_password, null: false, default: ""##パスワード
       t.string :encrypted_password_confirmation, null: ""##パスワードの確認
-      t.date :birthday, null: false, default: ""##誕生日
+      t.date :birthday, null: false##誕生日
 
 
       t.string :surname,            null: false, default: ""  ##姓
