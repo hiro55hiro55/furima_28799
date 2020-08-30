@@ -27,8 +27,7 @@ Things you may want to cover:
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | email    | string | null: false |<!-- 登録アドレス -->
-| password | string | null: false |<!-- パスワード -->
-| password_confirmation | string | null: false |<!-- パスワードの確認 -->
+| encrypted_password | string | null: false |<!-- パスワード -->
 | birth_date | date | null: false |<!-- 誕生日 -->
 | first_name  | string | null: false |<!-- 姓 -->
 | last_name     | string | null: false |<!-- 名 -->
