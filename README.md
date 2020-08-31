@@ -33,7 +33,7 @@ Things you may want to cover:
 | last_name     | string | null: false |<!-- 名 -->
 | first_name_kana  | string | null: false |<!-- 姓(カタカナ） -->
 | last_name_kana  | string | null: false |<!-- 名(カタカナ） -->
-| nikname  | string | null: false |<!-- ニックネーム -->
+| nickname  | string | null: false |<!-- ニックネーム -->
 
 
 ### Association
