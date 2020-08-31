@@ -26,15 +26,15 @@ Things you may want to cover:
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| surname  | string | null: false |
-| name     | string | null: false |
-| surname_phonetic  | string | null: false |
-| name_phonetic  | string | null: false |
-| nikname  | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
-| password_confirmation | string | '': false |
-| birthday | date | null: false |
+| email    | string | null: false |<!-- 登録アドレス -->
+| encrypted_password | string | null: false |<!-- パスワード -->
+| birth_date | date | null: false |<!-- 誕生日 -->
+| first_name  | string | null: false |<!-- 姓 -->
+| last_name     | string | null: false |<!-- 名 -->
+| first_name_kana  | string | null: false |<!-- 姓(カタカナ） -->
+| last_name_kana  | string | null: false |<!-- 名(カタカナ） -->
+| nickname  | string | null: false |<!-- ニックネーム -->
+
 
 ### Association
 
