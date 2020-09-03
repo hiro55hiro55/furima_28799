@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-      items = Item.create!(item_params)
+      items = Item.create(item_params)
       redirect_to "/items/#{items.id}"
   end
 
