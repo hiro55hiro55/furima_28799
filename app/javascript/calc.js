@@ -11,6 +11,7 @@ function profit1(){
     profit.textContent = now_profit
   })
 }
+
 window.addEventListener("load", profit1);
 
 
