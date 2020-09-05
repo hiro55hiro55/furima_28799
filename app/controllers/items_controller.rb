@@ -10,20 +10,15 @@ class ItemsController < ApplicationController
 
   def create
       @item = Item.new(item_params)
-      # binding.pry
-      if @item.valid?
-        redirect_to "/items/#{@item.id}"
-        @item.save
+      if @item.save
+        redirect_to root_path
       else
-        # redirect_to "/items/new"
         render :new
       end
   end
 
 
-  # def edit
-  #      @items = Item.find(item_params)
-  # end
+
 
   private
   def item_params

@@ -15,11 +15,5 @@ function profit1(){
 window.addEventListener("load", profit1);
 
 
-// item_price.addEventsListener("click",() => {
-//   const item_price = new FormData (document.getElementById("item-price")
-//   const add_tax_price = item_price * 0.1
-//   const profit = get_price - price_content
-//   document.getElementById("add_tax_price") = add_tax_price
-//   document.getElementById("profit") = profit
 
-// }
+
