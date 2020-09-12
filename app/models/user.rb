@@ -9,7 +9,7 @@ class User < ApplicationRecord
         
         with_options presence: true do
           validates :email
-          validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6}+\z/i, message: "は半角英数６文字以上で入力してください。"}
+          validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: "は半角英数６文字以上で入力してください。"}
           validates :birth_date
 
           validates :first_name, format: { with: /\A[一-龥]+\z/, message: "は漢字で入力してください。"}
