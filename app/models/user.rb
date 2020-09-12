@@ -8,8 +8,8 @@ class User < ApplicationRecord
         has_many :shops
         
         with_options presence: true do
-          validates :email, format: { with: /\A\S+@\S+\.\S+\z/, message: "は半角英数と記号で入力してください。"}
-          validates :password, format: { with: /\A[a-z0-9]+\z/, message: "は半角英数で入力してください。"}
+          validates :email
+          validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6}+\z/i, message: "は半角英数６文字以上で入力してください。"}
           validates :birth_date
 
           validates :first_name, format: { with: /\A[一-龥]+\z/, message: "は漢字で入力してください。"}
