@@ -3,7 +3,7 @@ class ShopAddress
 include ActiveModel::Model
   attr_accessor :item_id,:user_id,:token, :postal_code, :city, :addresses, :phone_number, :buildings ,:address_prefecture_id
   with_options presence: true do
-    validates :postal_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
+    validates :postal_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "郵便番号は、3桁の数字ハイフン(ー）4桁の数字で記入してくださいis invalid. Include hyphen(-)"}
     validates :city
     validates :addresses
     validates :phone_number, format: {with:/\A\d{4,11}\z/ ,message: "ハイフンは不要で、5桁以上11桁以内で入力してください"}
