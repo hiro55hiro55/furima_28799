@@ -14,6 +14,10 @@ RSpec.describe ShopAddress, type: :model do
     it"配送先の情報として、郵便番号・都道府県・市区町村・番地・電話番号が存在している"do
        expect(@shop_address).to be_valid
     end
+    it"建物名は空白でも購入ができる"do
+       @shop_address.buildings = " "
+       @shop_address.valid?
+    end
 
 
   
@@ -52,6 +56,11 @@ RSpec.describe ShopAddress, type: :model do
       expect(@shop_address.errors.full_messages).to include("Addresses can't be blank")
     end
     
+    it"tokenがないと購入ができない"do
+      @shop_address.token = ""
+      @shop_address.valid?
+      expect(@shop_address.errors.full_messages).to include("Token can't be blank")
+    end
   end
 
 
