@@ -17,6 +17,7 @@ RSpec.describe ShopAddress, type: :model do
     it"建物名は空白でも購入ができる"do
        @shop_address.buildings = " "
        @shop_address.valid?
+       expect(@shop_address).to be_valid
     end
 
 
