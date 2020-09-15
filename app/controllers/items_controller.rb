@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController 
-      before_action :set_item, only:[:show,:destroy]
+      before_action :set_item, only:[:update,:edit,:show,:destroy]
   def new
      @item = Item.new
   end
@@ -19,6 +19,17 @@ class ItemsController < ApplicationController
 
   def show
   end
+
+  def edit
+   return root_path if current_user.id != @item.user_id 
+  end
+  def update
+   if @item.update(item_params)
+      redirect_to root_path
+   else
+     redirect_to edit_item_path
+  end
+end
 
   def destroy
     if @item.destroy
