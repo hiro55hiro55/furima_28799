@@ -10,8 +10,12 @@ include ActiveModel::Model
     validates :address_prefecture_id, numericality: { other_than: 0 }
     validates :token
   end
+
+
   def save
     shop = Shop.create(user_id: user_id,item_id: item_id)
     Address.create(postal_code: postal_code, city: city, addresses: addresses, phone_number: phone_number, buildings: buildings ,address_prefecture_id: address_prefecture_id,shop_id:shop.id)
   end
+
+  
 end
